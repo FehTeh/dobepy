@@ -25,7 +25,6 @@ class ImageProcessorTask(threading.Thread):
             jpg = cv2.imencode('.jpg', img)
             self.img = jpg[1].tobytes()
         self.cap.release()
-        cv2.destroyAllWindows()
     
     def join(self):
         self.die = True
