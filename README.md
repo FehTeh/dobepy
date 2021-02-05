@@ -3,20 +3,20 @@ Stream your webcam over mjpeg protocol
 
 ## Getting Started
 
-To run: `python mjpeg_camera_stream.py`
+To run: `python3 mjpeg_camera_stream.py`
 
 Now the video is available at: `http://localhost:8080/video/mjpg.cgi`
 
 And there is also another endpoint that returns a static image: `http://localhost:8080/image.jpg`
 
 This will start using the first webcam found. To change add the camera location or try another number like: 
-`python mjpeg_camera_stream.py 1`
+`python3 mjpeg_camera_stream.py 1`
 
 ### Dependencies
 
-First, you'll need to install the dependencies via 'pip'
+First, you'll need to install the dependencies via 'pip3'
 
-`pip install -r requirements.txt`
+`pip3 install -r requirements.txt`
 
 ### Curiosity
 
