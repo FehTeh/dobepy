@@ -4,7 +4,7 @@ from mjpeg.server import MJPEGResponse
 from image_processor_task import ImageProcessorTask
 
 app = Flask(__name__)
-camera = 0
+camera = "0"
 
 def relay():
     while True:
