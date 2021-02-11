@@ -1,6 +1,6 @@
 import sys
 from flask import Flask, Response
-from image_processor_task import ImageProcessorTask
+from image_processor import ImageProcessor
 
 app = Flask(__name__)
 camera = "0"
@@ -22,10 +22,9 @@ if __name__ == "__main__":
     
     if len(sys.argv) > 1:
         camera = sys.argv[1]
-         
-    t = ImageProcessorTask(camera)
-    t.start()
+
+    t = ImageProcessor(camera)    
 
     app.run(host='0.0.0.0', port=8080)
     print("exiting")
-    t.join()
+    t.close()
