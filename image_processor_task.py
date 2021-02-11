@@ -22,8 +22,8 @@ class ImageProcessorTask(threading.Thread):
                 time.sleep(1)
                 continue
 
-            jpg = cv2.imencode('.jpg', img)
-            self.img = jpg[1].tobytes()
+            ret, buffer = cv2.imencode('.jpg', img)
+            self.img = buffer.tobytes()
         self.cap.release()
     
     def join(self):
